@@ -325,9 +325,9 @@ class BuildExtPythonnet(build_ext.build_ext):
             if DEVTOOLS == "Mono":
                 nuget = "mono {0}".format(nuget)
 
-            cmd = "{0} update -self".format(nuget)
-            self.debug_print("Updating NuGet: {0}".format(cmd))
-            subprocess.check_call(cmd, shell=use_shell)
+#            cmd = "{0} update -self".format(nuget)
+#            self.debug_print("Updating NuGet: {0}".format(cmd))
+#            subprocess.check_call(cmd, shell=use_shell)
 
             cmd = "{0} restore pythonnet.sln -o packages".format(nuget)
             self.debug_print("Installing packages: {0}".format(cmd))
